@@ -1,6 +1,6 @@
--- Set leader key to space (must be set before plugins load)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- Set leader key to comma (must be set before plugins load)
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 vim.opt.relativenumber = true
 vim.opt.number = true
