@@ -18,4 +18,5 @@ defer _ = gpa.deinit();]], {})),
     i(3, "i"),
     i(4, "-- body"),
   })),
+  s("structfield", fmt('std.builtin.Type.StructField', {})),
 }
