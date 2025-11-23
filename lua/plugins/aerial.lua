@@ -115,7 +115,7 @@ return {
     -- icon when the tree is collapsed at that symbol, or "Collapsed" to specify a
     -- default collapsed icon. The default icon set is determined by the
     -- "nerd_font" option below.
-    icons = {},
+    -- icons = {},
 
     -- Control which windows and buffers aerial should ignore.
     ignore = {
@@ -147,7 +147,7 @@ return {
     link_tree_to_folds = true,
 
     -- Set default symbol icons to use patched font icons (see https://www.nerdfonts.com/)
-    nerd_font = "auto",
+    nerd_font = true,
 
     -- Call this function when aerial attaches to a buffer.
     on_attach = function(bufnr)
