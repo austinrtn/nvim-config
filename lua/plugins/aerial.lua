@@ -249,7 +249,7 @@ return {
     },
   },
   keys = {
-    { "<leader>o", "<cmd>AerialToggle!<CR>", desc = "Toggle Aerial outline" },
+    { "<leader>oo", "<cmd>AerialToggle!<CR>", desc = "Toggle Aerial outline" },
     { "<leader>or", function() require("aerial").refetch_symbols() end, desc = "Refresh Aerial outline" },
   },
 }

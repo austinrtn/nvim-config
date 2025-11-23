@@ -117,7 +117,7 @@ Personal Neovim configuration with a focus on Zig development and efficient navi
 | Key | Action |
 |-----|--------|
 | `,a` | Harpoon: Add file to list |
-| `,o` | Toggle Aerial outline |
+| `,oo` | Toggle Aerial outline |
 | `,q` | Open diagnostic quickfix list |
 | `,D` | Type definition |
 | `,/` | Fuzzy search in current buffer |
