@@ -951,6 +951,9 @@ require('lazy').setup({
         return '%2l:%-2v'
       end
 
+      -- Note: navic breadcrumbs are configured in lua/plugins/navic.lua
+      -- They appear in the winbar (top of window) when LSP is attached
+
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
