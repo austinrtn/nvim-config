@@ -16,12 +16,7 @@ return {
           if navic_ok and client.server_capabilities.documentSymbolProvider then
             navic.attach(client, bufnr)
           end
-
-          -- Attach aerial if available
-          local aerial_ok, aerial = pcall(require, "aerial")
-          if aerial_ok then
-            aerial.on_attach(client, bufnr)
-          end
+          -- Note: Aerial attaches automatically via its LSP backend configuration
         end,
       })
     end,
