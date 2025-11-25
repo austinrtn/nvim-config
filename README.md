@@ -200,10 +200,41 @@ Personal Neovim configuration with a focus on Zig development and efficient navi
 └── README.md              # This file
 ```
 
+## Zig Comptime Field Annotations
+
+Since ZLS doesn't expose comptime-generated struct fields, you can use special comment annotations to make them visible in Aerial's outline.
+
+### Usage
+
+Inside comptime type-generating functions, add comments in the format:
+```zig
+//~Field: name: Type
+```
+
+### Example
+
+```zig
+pub fn CTStruct(comptime args: anytype) type {
+    return struct {
+        //~Field: count: u32
+        //~Field: data: []const u8
+        //~Field: allocator: std.mem.Allocator
+    };
+}
+```
+
+Aerial will display:
+```
+CTStruct (Function)
+  ├─ count: u32 (Field)
+  ├─ data: []const u8 (Field)
+  └─ allocator: std.mem.Allocator (Field)
+```
+
 ## Notes
 
 - Based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 - Optimized for Zig development with zls integration
 - Uses mini.statusline with nvim-navic for contextual breadcrumbs
-- Aerial provides a comprehensive symbol outline sidebar
+- Aerial provides a comprehensive symbol outline sidebar with comptime field annotation support
 - Harpoon provides fast navigation between frequently accessed files

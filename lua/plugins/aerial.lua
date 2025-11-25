@@ -98,6 +98,7 @@ return {
       "Class",
       "Constructor",
       "Enum",
+      "Field",
       "Function",
       "Interface",
       "Module",
@@ -168,6 +169,85 @@ return {
     -- Invoked after each symbol is parsed
     post_parse_symbol = function(bufnr, item, ctx)
       return true
+    end,
+
+    -- Zig comptime field annotation parser
+    -- Use //~Field: name: Type comments inside comptime type-generating functions
+    post_add_all_symbols = function(bufnr, items, ctx)
+      local ft = vim.bo[bufnr].filetype
+      if ft ~= "zig" then
+        return items
+      end
+
+      local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+      local field_pattern = "^%s*//~Field:%s*([%w_]+):%s*(.+)%s*$"
+
+      -- Collect field annotations with line numbers
+      local field_annotations = {}
+      for lnum, line in ipairs(lines) do
+        local name, field_type = line:match(field_pattern)
+        if name then
+          table.insert(field_annotations, {
+            lnum = lnum,
+            name = name,
+            field_type = field_type:gsub("%s+$", ""),
+          })
+        end
+      end
+
+      if #field_annotations == 0 then
+        return items
+      end
+
+      -- Find parent function for a line number
+      local function find_parent_function(items_list, lnum)
+        for _, item in ipairs(items_list) do
+          if item.lnum <= lnum and item.end_lnum and item.end_lnum >= lnum then
+            if item.kind == "Function" then
+              if item.children then
+                local child_match = find_parent_function(item.children, lnum)
+                if child_match then return child_match end
+              end
+              return item
+            end
+            if item.children then
+              local child_match = find_parent_function(item.children, lnum)
+              if child_match then return child_match end
+            end
+          end
+        end
+        return nil
+      end
+
+      -- Group fields by parent function
+      local fields_by_parent = {}
+      for _, field in ipairs(field_annotations) do
+        local parent = find_parent_function(items, field.lnum)
+        if parent then
+          fields_by_parent[parent] = fields_by_parent[parent] or {}
+          table.insert(fields_by_parent[parent], field)
+        end
+      end
+
+      -- Inject field symbols as children
+      for parent, fields in pairs(fields_by_parent) do
+        parent.children = parent.children or {}
+        for _, field in ipairs(fields) do
+          table.insert(parent.children, {
+            kind = "Field",
+            name = field.name .. ": " .. field.field_type,
+            level = (parent.level or 0) + 1,
+            lnum = field.lnum,
+            end_lnum = field.lnum,
+            col = 0,
+            end_col = #lines[field.lnum],
+            parent = parent,
+          })
+        end
+        table.sort(parent.children, function(a, b) return a.lnum < b.lnum end)
+      end
+
+      return items
     end,
 
     -- When true, aerial will automatically close after jumping to a symbol
