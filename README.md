@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-Personal Neovim configuration with a focus on Zig development and efficient navigation.
+Personal Neovim configuration with a focus on Zig development, efficient navigation, and Obsidian-like markdown editing.
 
 ## Special Features
 
@@ -36,6 +36,10 @@ Personal Neovim configuration with a focus on Zig development and efficient navi
 - **nvim-dap** - Debug Adapter Protocol client
 - **nvim-dap-ui** - UI for debugging
 - **nvim-dap-virtual-text** - Show variable values inline during debugging
+
+### Markdown & Notes
+- **render-markdown.nvim** - Beautiful markdown rendering (headings, code blocks, checkboxes)
+- **obsidian.nvim** - Obsidian vault integration (wiki links, daily notes, search, backlinks)
 
 ### UI & Editing
 - **mini.nvim** - Collection of minimal plugins (statusline, surround, text objects)
@@ -112,6 +116,19 @@ Personal Neovim configuration with a focus on Zig development and efficient navi
 | Key | Action |
 |-----|--------|
 | `,ws` | Workspace symbols (Telescope) |
+
+#### Notes (`<leader>n`) - Obsidian
+| Key | Action |
+|-----|--------|
+| `,nn` | New note |
+| `,nq` | Quick switch notes |
+| `,ns` | Search notes |
+| `,nt` | Today's daily note |
+| `,ny` | Yesterday's daily note |
+| `,nb` | Show backlinks |
+| `,nl` | Show links in note |
+| `,np` | Paste image from clipboard |
+| `,ch` | Toggle checkbox (in markdown) |
 
 #### Other Leader Actions
 | Key | Action |
@@ -190,6 +207,7 @@ Personal Neovim configuration with a focus on Zig development and efficient navi
 │       ├── harpoon.lua     # File navigation
 │       ├── lsp.lua         # LSP configuration
 │       ├── luasnip-snippets.lua # Snippet definitions
+│       ├── markdown.lua    # Obsidian-like markdown editing
 │       ├── navic.lua       # Breadcrumbs
 │       ├── nvim-tree.lua   # File tree
 │       ├── persistence.lua # Session management
