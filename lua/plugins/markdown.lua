@@ -16,6 +16,12 @@ return {
         enabled = true,
         style = "full",
         border = "rounded",
+        conceal_delimiters = true,
+      },
+      conceal = {
+        char_patterns = {
+          "`",  -- Conceal backticks for inline code
+        },
       },
       checkbox = {
         enabled = true,
@@ -25,10 +31,6 @@ return {
       bullet = {
         enabled = true,
         icons = { "●", "○", "◆", "◇" },
-      },
-      inline_code = {
-        enabled = true,
-        highlight = "RenderMarkdownCode",
       },
     },
   },
