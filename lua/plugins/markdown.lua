@@ -26,6 +26,10 @@ return {
         enabled = true,
         icons = { "●", "○", "◆", "◇" },
       },
+      inline_code = {
+        enabled = true,
+        highlight = "RenderMarkdownCode",
+      },
     },
   },
 

@@ -38,8 +38,9 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 - **nvim-dap-virtual-text** - Show variable values inline during debugging
 
 ### Markdown & Notes
-- **render-markdown.nvim** - Beautiful markdown rendering (headings, code blocks, checkboxes)
+- **render-markdown.nvim** - Beautiful markdown rendering (headings, code blocks, checkboxes, inline code with concealed backticks)
 - **obsidian.nvim** - Obsidian vault integration (wiki links, daily notes, search, backlinks)
+  - Inline code backticks (\`\`) are automatically concealed for a cleaner Obsidian-like appearance
 
 ### UI & Editing
 - **mini.nvim** - Collection of minimal plugins (statusline, surround, text objects)
