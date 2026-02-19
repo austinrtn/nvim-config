@@ -30,6 +30,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 ### LSP & Language Support
 - **zls** - Zig Language Server configuration
 - **ts_ls** - JavaScript/TypeScript Language Server (via typescript-language-server)
+- **html** - HTML Language Server (via vscode-langservers-extracted)
 - **conform.nvim** - Code formatting
 
 ### Debugging

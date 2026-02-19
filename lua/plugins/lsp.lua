@@ -26,5 +26,12 @@ return {
       root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
       on_attach = on_attach,
     })
+
+    -- HTML
+    lspconfig.html.setup({
+      cmd = { "vscode-html-language-server", "--stdio" },
+      filetypes = { "html" },
+      on_attach = on_attach,
+    })
   end,
 }
