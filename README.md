@@ -6,7 +6,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 
 - **Leader Key**: `,` (comma)
 - **Modular Plugin System**: Plugins organized in `lua/plugins/` directory
-- **LSP Support**: Zig (zls) and JavaScript/TypeScript (ts_ls) with symbol navigation
+- **LSP Support**: Zig (zls), JavaScript/TypeScript (ts_ls), HTML, and Go (gopls) with symbol navigation
 - **Code Breadcrumbs**: Real-time function/class context in statusline via nvim-navic
 - **Symbol Outline**: Aerial.nvim for tree-view of code structure
 - **Fast File Navigation**: Harpoon for marking and jumping between frequently used files
@@ -31,6 +31,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 - **zls** - Zig Language Server configuration
 - **ts_ls** - JavaScript/TypeScript Language Server (via typescript-language-server)
 - **html** - HTML Language Server (via vscode-langservers-extracted)
+- **gopls** - Go Language Server (via `go install golang.org/x/tools/gopls@latest`)
 - **conform.nvim** - Code formatting
 
 ### Debugging
@@ -207,7 +208,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 │       ├── completion.lua  # Completion setup
 │       ├── dap.lua         # Debugging
 │       ├── harpoon.lua     # File navigation
-│       ├── lsp.lua         # LSP configuration (zls, ts_ls)
+│       ├── lsp.lua         # LSP configuration (zls, ts_ls, html, gopls)
 │       ├── luasnip-snippets.lua # Snippet definitions
 │       ├── markdown.lua    # Obsidian-like markdown editing
 │       ├── navic.lua       # Breadcrumbs

@@ -33,5 +33,21 @@ return {
       filetypes = { "html" },
       on_attach = on_attach,
     })
+
+    -- Go
+    lspconfig.gopls.setup({
+      cmd = { "gopls" },
+      filetypes = { "go", "gomod", "gowork", "gotmpl" },
+      root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+      on_attach = on_attach,
+      settings = {
+        gopls = {
+          analyses = {
+            unusedparams = true,
+          },
+          staticcheck = true,
+        },
+      },
+    })
   end,
 }
