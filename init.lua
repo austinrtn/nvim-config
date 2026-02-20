@@ -38,6 +38,9 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Add Go binaries to PATH so gopls and other go tools are found
+vim.env.PATH = vim.env.PATH .. ":" .. vim.env.HOME .. "/go/bin"
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
