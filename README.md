@@ -47,6 +47,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 ### UI & Editing
 - **mini.nvim** - Collection of minimal plugins (statusline, surround, text objects)
 - **tokyonight.nvim** - Color scheme
+- **kanagawa.nvim** - Kanagawa color scheme
 - **which-key.nvim** - Keybinding hints
 - **gitsigns.nvim** - Git integration in sign column
 - **zen-mode.nvim** - Distraction-free writing mode
