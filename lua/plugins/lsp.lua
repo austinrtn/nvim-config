@@ -34,6 +34,14 @@ return {
       on_attach = on_attach,
     })
 
+    -- Python
+    lspconfig.pyright.setup({
+      cmd = { "pyright-langserver", "--stdio" },
+      filetypes = { "python" },
+      root_dir = util.root_pattern("pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git"),
+      on_attach = on_attach,
+    })
+
     -- Go
     lspconfig.gopls.setup({
       cmd = { "gopls" },
