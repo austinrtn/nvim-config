@@ -19,6 +19,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 - **nvim-cmp** - Autocompletion engine
 - **LuaSnip** - Snippet engine
 - **nvim-treesitter** - Syntax highlighting and code parsing
+- **nvim-treesitter-textobjects** - Treesitter-based text objects and motions
 
 ### Navigation
 - **telescope.nvim** - Fuzzy finder for files, buffers, and symbols
@@ -188,6 +189,12 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 | `<F11>` | Step into |
 | `<F12>` | Step out |
 
+### Function Navigation (Treesitter Textobjects)
+| Key | Action |
+|-----|--------|
+| `]]` | Jump to end of next function |
+| `[[` | Jump to end of previous function |
+
 ### Other
 | Key | Action |
 |-----|--------|
@@ -217,6 +224,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 │       ├── persistence.lua # Session management
 │       ├── snacks.lua      # UI utilities
 │       ├── telescope.lua   # Fuzzy finder
+│       ├── treesitter-textobjects.lua # Function navigation via textobjects
 │       └── zen-mode.lua    # Distraction-free mode
 └── README.md              # This file
 ```
