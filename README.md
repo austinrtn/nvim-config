@@ -72,6 +72,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 | `,fh` | Search help tags (Telescope) |
 | `,fd` | Show diagnostics (Telescope) |
 | `,fs` | LSP document symbols (Telescope) |
+| `,fc` | Colorscheme picker (Telescope, live preview) |
 | `,f` | Format buffer |
 
 #### File Tree (`<leader>e`)
@@ -84,6 +85,8 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 | Key | Action |
 |-----|--------|
 | `,ca` | Code action |
+| `,cn` | Next colorscheme (cycle: everforest → cyberdream → kanagawa) |
+| `,cp` | Previous colorscheme |
 
 #### Document/Debug (`<leader>d`)
 | Key | Action |

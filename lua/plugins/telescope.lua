@@ -22,5 +22,6 @@ return {
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Telescope diagnostics' })
     vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'Telescope LSP document symbols' })
+    vim.keymap.set('n', '<leader>fc', builtin.colorscheme, { desc = 'Telescope colorscheme picker' })
   end,
 }
