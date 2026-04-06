@@ -56,6 +56,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 - **snacks.nvim** - UI utilities and notifications
 - **todo-comments.nvim** - Highlight TODO/FIXME/etc in comments
 - **nvim-autopairs** - Auto-close brackets and quotes
+- **nvim-surround** - Add, delete, and change surrounding pairs (brackets, quotes, tags)
 - **Comment.nvim** - Easy commenting
 - **vim-sleuth** - Auto-detect indentation
 
@@ -205,6 +206,14 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 | `<Esc>` | Clear search highlights |
 | `<Esc><Esc>` | Exit terminal mode |
 
+### Surround (nvim-surround)
+| Key | Action |
+|-----|--------|
+| `ys{motion}{char}` | Add surrounding (e.g. `ysiw"` wraps word in quotes) |
+| `ds{char}` | Delete surrounding |
+| `cs{old}{new}` | Change surrounding |
+| `S{char}` | Surround selection (visual mode) |
+
 ## Configuration Structure
 
 ```
@@ -227,6 +236,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 │       ├── nvim-tree.lua   # File tree
 │       ├── persistence.lua # Session management
 │       ├── snacks.lua      # UI utilities
+│       ├── surround.lua    # Surround pairs editing
 │       ├── telescope.lua   # Fuzzy finder
 │       ├── treesitter-textobjects.lua # Function navigation via textobjects
 │       └── zen-mode.lua    # Distraction-free mode
