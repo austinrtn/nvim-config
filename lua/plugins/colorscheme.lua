@@ -31,6 +31,15 @@ return {
     end,
   },
   {
+    "zitrocode/carvion.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("carvion").setup({})
+      -- vim.cmd("colorscheme carvion")
+    end,
+  },
+  {
     -- Colorscheme cycling through favorites
     dir = vim.fn.stdpath("config"),
     name = "colorscheme-cycle",

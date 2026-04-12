@@ -50,6 +50,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 - **mini.nvim** - Collection of minimal plugins (statusline, surround, text objects)
 - **tokyonight.nvim** - Color scheme
 - **kanagawa.nvim** - Kanagawa color scheme
+- **carvion.nvim** - Carvion color scheme
 - **which-key.nvim** - Keybinding hints
 - **gitsigns.nvim** - Git integration in sign column
 - **zen-mode.nvim** - Distraction-free writing mode
@@ -86,7 +87,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 | Key | Action |
 |-----|--------|
 | `,ca` | Code action |
-| `,cn` | Next colorscheme (cycle: everforest → cyberdream → kanagawa) |
+| `,cn` | Next colorscheme (cycle: everforest → cyberdream → kanagawa → carvion) |
 | `,cp` | Previous colorscheme |
 
 #### Document/Debug (`<leader>d`)

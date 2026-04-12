@@ -3,4 +3,5 @@ return {
   "everforest",
   "cyberdream",
   "kanagawa",
+  "carvion",
 }
