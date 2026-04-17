@@ -40,6 +40,15 @@ return {
     end,
   },
   {
+    "olimorris/onedarkpro.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("onedarkpro").setup({})
+      -- vim.cmd("colorscheme onedark")
+    end,
+  },
+  {
     -- Colorscheme cycling through favorites
     dir = vim.fn.stdpath("config"),
     name = "colorscheme-cycle",

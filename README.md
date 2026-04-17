@@ -51,6 +51,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 - **tokyonight.nvim** - Color scheme
 - **kanagawa.nvim** - Kanagawa color scheme
 - **carvion.nvim** - Carvion color scheme
+- **onedarkpro.nvim** - One Dark Pro color scheme (variants: onedark, onelight, onedark_vivid, onedark_dark)
 - **which-key.nvim** - Keybinding hints
 - **gitsigns.nvim** - Git integration in sign column
 - **zen-mode.nvim** - Distraction-free writing mode
@@ -87,7 +88,7 @@ Personal Neovim configuration with a focus on Zig development, efficient navigat
 | Key | Action |
 |-----|--------|
 | `,ca` | Code action |
-| `,cn` | Next colorscheme (cycle: everforest → cyberdream → kanagawa → carvion) |
+| `,cn` | Next colorscheme (cycle: everforest → cyberdream → kanagawa → carvion → onedark) |
 | `,cp` | Previous colorscheme |
 
 #### Document/Debug (`<leader>d`)

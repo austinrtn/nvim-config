@@ -4,4 +4,5 @@ return {
   "cyberdream",
   "kanagawa",
   "carvion",
+  "onedark",
 }
